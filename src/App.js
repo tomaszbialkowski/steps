@@ -42,7 +42,9 @@ export default function App() {
             </Button>
 
             <Button bgColor={"#7950f2"} color={"#fff"} onClick={handleNext}>
-              Next<span>👉</span>
+              <Span>
+                <Emoji />
+              </Span>
             </Button>
           </div>
         </div>
@@ -60,4 +62,12 @@ function Button({ bgColor, color, onClick, children }) {
       {children}
     </button>
   );
+}
+
+function Span({ children }) {
+  return <span>Next {children}</span>;
+}
+
+function Emoji() {
+  return <span>👉</span>;
 }
